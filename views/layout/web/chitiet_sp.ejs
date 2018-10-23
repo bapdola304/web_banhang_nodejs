@@ -1,10 +1,13 @@
 <div class="container">
   <div class="col-md-9 spleft">
-  <div class="mySlides">
-  
-    <img src="http://product.hstatic.net/1000026602/product/44352399_1822712927851050_2376691789001129984_n_master.jpg" >
-  </div>
+    <% sp.forEach(function(sp){
 
+    %>
+      <div class="mySlides">
+      
+        <img src="../<%= sp.anhsp %>" >
+      </div>
+  <%  })  %>
   <div class="mySlides">
 
     <img src="http://product.hstatic.net/1000026602/product/44240920_1822713114517698_6888710170747076608_n_master.jpg" >

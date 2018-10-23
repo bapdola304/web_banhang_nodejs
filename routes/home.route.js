@@ -6,7 +6,7 @@ var multer  = require('multer');
 var upload = multer({ dest: 'public/uploads/' });
 router.get('/',controller.home);
 
-router.get('/chitietsp',controller.chitietsp);
+router.get('/chitietsp/:idsp',controller.chitietsp);
 
 
 
