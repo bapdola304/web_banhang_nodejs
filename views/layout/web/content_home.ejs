@@ -1,0 +1,130 @@
+<!-- sp_moi -->
+	<div class="container">
+		<div class="spmoi text-center">
+			<h3>Sản phẩm mới</h3>
+			<p><a href="#"> Xem Thêm </a></p>
+		</div>
+
+		<section class="regular slider">
+			<% spm.forEach(function(spm){
+
+			 %>
+		    <div class="item_spmoi">
+		    	<a href="/chitietsp">
+			      <img src="<%= spm.anhsp %>" width="100%">
+			      <div class="info">
+			      	<h4><a href="#"></a> <%= spm.tensp %></h4>
+			      	<div class="gia">
+			      		<span><%= spm.gia %>₫</span>
+			      	</div>
+		      	</a>
+		      </div>
+		    </div>
+			<% }); %>
+	  </section>
+</div>
+<!-- end sanpham-moi -->
+
+<div class="spbanchay">
+	<div class="container">
+		<div class="spmoi text-center">
+			<h3>Sản phẩm bán chạy</h3>
+			<p><a href="#"> Xem Thêm </a></p>
+		</div>
+
+		<section class="center slider">
+		<% spbc.forEach(function(spbc){
+
+		 %>
+		    <div>
+		      <img src="<%= spbc.anhsp %>">
+		       <div class="info_spbanchay">
+		      	<h4><a href="#"></a><%= spbc.tensp %> </h4>
+		      	<div class="gia">
+		      		<span><%= spbc.gia %>₫</span>
+		      	</div>
+		      </div>
+		    </div>
+		    <% }) %>
+  		</section>
+
+	</div>
+</div>
+<!-- end-sp_banchay -->
+
+
+	<div class="container">
+		<div class="spmoi text-center">
+			<h3>Sản phẩm Sale</h3>
+			<p><a href="#"> Xem Thêm </a></p>
+		</div>
+
+		<section class="regular2 slider">
+		    <div class="item_spsale">
+		      <img src="http://product.hstatic.net/1000026602/product/41871318_1783416348447375_8711673898111860736_o_large.jpg">
+		      <div class="info_spsale">
+		      	<h4><a href="#"></a> Sơ Mi Kaki MNG 3 Màu </h4>
+		      	<div class="gia">
+		      		<span>320,000₫</span>
+		      	</div>
+		      </div>
+		    </div>
+
+		    <div class="item_spsale">
+		      <img src="http://product.hstatic.net/1000026602/product/41871318_1783416348447375_8711673898111860736_o_large.jpg">
+		      <div class="info_spsale">
+		      	<h4><a href="#"></a> Sơ Mi Kaki MNG 3 Màu </h4>
+		      	<div class="gia">
+		      		<span>320,000₫</span>
+		      	</div>
+		      </div>
+		    </div>
+
+
+		    <div class="item_spsale">
+		      <img src="http://product.hstatic.net/1000026602/product/41871318_1783416348447375_8711673898111860736_o_large.jpg">
+		      <div class="info_spsale">
+		      	<h4><a href="#"></a> Sơ Mi Kaki MNG 3 Màu </h4>
+		      	<div class="gia">
+		      		<span>320,000₫</span>
+		      	</div>
+		      </div>
+		    </div>
+
+
+		    <div class="item_spsale">
+		      <img src="http://product.hstatic.net/1000026602/product/41871318_1783416348447375_8711673898111860736_o_large.jpg">
+		      <div class="info_spsale">
+		      	<h4><a href="#"></a> Sơ Mi Kaki MNG 3 Màu </h4>
+		      	<div class="gia">
+		      		<span>320,000₫</span>
+		      	</div>
+		      </div>
+		    </div>
+
+
+		    <div class="item_spsale">
+		      <img src="http://product.hstatic.net/1000026602/product/41871318_1783416348447375_8711673898111860736_o_large.jpg">
+		      <div class="info_spsale">
+		      	<h4><a href="#"></a> Sơ Mi Kaki MNG 3 Màu </h4>
+		      	<div class="gia">
+		      		<span>320,000₫</span>
+		      	</div>
+		      </div>
+		    </div>
+
+
+		    <div class="item_spsale">
+		      <img src="http://product.hstatic.net/1000026602/product/41871318_1783416348447375_8711673898111860736_o_large.jpg">
+		      <div class="info_spsale">
+		      	<h4><a href="#"></a> Sơ Mi Kaki MNG 3 Màu </h4>
+		      	<div class="gia">
+		      		<span>320,000₫</span>
+		      	</div>
+		      </div>
+		    </div>
+		    
+
+	  </section>
+</div>
+<!-- end-sp_sale -->
