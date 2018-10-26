@@ -6,8 +6,16 @@
 
 			<div class="login">
 				<p>Đăng Nhập</p>
-				<p>Giỏ Hàng <i class="fas fa-shopping-cart"></i> </p>
+        <div class="cart1">
+				<p>Giỏ Hàng <i class="fas fa-shopping-cart"></i> <%= sl ? sl : 0 %></p>
+            <div class="cart-info">
+                <p>Tổng Cộng: <%= sl ? sl : 0 %> </p>
+                <span>Giỏ Hàng</span>
+            </div>
+
+        </div>
 			</div>
+
 	</div>
 
 </div>

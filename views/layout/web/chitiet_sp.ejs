@@ -7,7 +7,7 @@
       
         <img src="../<%= sp.anhsp %>" >
       </div>
-  <%  })  %>
+
   <div class="mySlides">
 
     <img src="http://product.hstatic.net/1000026602/product/44240920_1822713114517698_6888710170747076608_n_master.jpg" >
@@ -51,15 +51,17 @@
    </div>
 
    <div class="themgio">
-     <button class="btn btn-primary">Thêm vào giỏ 
-    </button>
+   <a href="/cart/add_cart/<%= sp._id %>">
+       <button class="btn btn-primary">Thêm vào giỏ 
+      </button>
+    </a>
   </div>
   <div class="muangay">
      <button class="btn btn-primary">Mua Ngay 
     </button>
   </div>
 </div>
-
+  <%  })  %>
 <div class="container">
 <div class="tt">
   <div class="col-md-4 tt-sp">

@@ -38,6 +38,30 @@ body{
 .navbar-default .navbar-nav>li>:hover{
 	color: white !important;
 }
+.cart-info{
+  position: absolute;
+    min-width: 155px;
+    right: -35px;
+    background: #fff;
+    padding: 10px;
+
+    z-index: 99;
+    border: 1px solid #E1E1E1;
+    opacity: 0;
+}
+.cart-info span{
+  border: 1px solid grey;
+      padding: 7px 30px;
+      margin-bottom: 10px;
+        color: black;
+}
+.cart-info p{
+  margin: 20px 0px;
+    color: black;
+}
+.cart1:hover .cart-info{
+  opacity: 1;
+}
 
 .spmoi h3{
 	font-size: 24px;
