@@ -1,0 +1,45 @@
+<div class="container">
+
+	<% if(tongtien > 0){ %>
+	 <table class="table table-bordered">
+		    <thead>
+		      <tr>
+		        <th>Hình Ảnh</th>
+		        <th>Tên Sản Phẩm</th>
+		        <th>Số Lượng</th>
+		        <th>Giá Tiền</th>
+		        <th>Cập Nhật</th>
+		        <th>Xóa</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		    	
+		    	<% sp.forEach((sp) => { %>
+			      <tr>
+			        <td>
+			        	<img src="../<%= sp.item.anhsp %>" alt="" width="100">
+			        </td>
+			        <td><%= sp.item.tensp %></td>
+			        <td style="width: 40px">
+			        	<input type="number" name="soluong" value="<%= sp.soluong %>" style="width: 90px"/>
+			        </td>
+			        <td style="width: 130px" ><%= sp.item.gia %></td>
+			        <td>update</td>
+			        <td>xoa</td>
+			      </tr>
+		      <% }) %>
+		      <tr class="tongtien">
+		      	<td></td>
+		        <td></td>
+		        <td></td>
+		        <td> TỔNG TIỀN</td>
+		        <td> <%= tongtien %></td>
+		        <td></td>
+		      </tr>
+		    
+		    </tbody>
+	</table>
+	   <%}else{ %>
+			chua co gio hang
+	   <% } %>
+</div>

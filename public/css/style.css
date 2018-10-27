@@ -275,6 +275,9 @@ body{
 	margin-top: 3%;
 	text-align: center;
 }
+.tongtien td{
+  border: none !important;
+}
 /*end-xemthem*/
 
 /*footer*/

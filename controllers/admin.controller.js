@@ -9,11 +9,14 @@ module.exports.index = async function(req, res){
 }
 
 module.exports.addSanPham = function(req, res){
+
 	req.body.gia = parseInt(req.body.gia);
-	req.body.anhsp = req.file.path.split('/').slice(1).join('/');
-	console.log(req.body);
+	req.body.anhsp = req.file.destination.split('/').slice(1)+ '/' + req.file.originalname ;
+	console.log(req.body.anhsp);
+	console.log(req.file.originalname);
 	var sanpham = new sp(req.body);
 	sanpham.save();
+
 	res.redirect('/admin');
 }
 
@@ -32,6 +35,7 @@ module.exports.editSanPham = async (req, res) =>{
 			gia : req.body.gia,
 			masp : req.body.masp
 		});
+		console.log(req.body.anhsp);
 	}else{
 			var anhsp = req.body.anhsp = req.file.path.split('/').slice(1).join('/');
 			await sp.updateOne({_id : id},{
@@ -40,6 +44,7 @@ module.exports.editSanPham = async (req, res) =>{
 				masp : req.body.masp,
 				anhsp : anhsp
 			});
+			console.log(req.body.anhsp);
 	}
 	res.redirect('/admin');
 }
