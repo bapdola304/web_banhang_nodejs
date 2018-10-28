@@ -15,3 +15,8 @@ var sp = require('../models/admin.model');
   	var sanpham = await sp.find({_id : idsp});
  	res.render('template/chitietsp',{sp : sanpham});
  }
+ module.exports.xemthem = async (req, res) =>{
+ 	var masp = req.params.masp;
+ 	var spm = await sp.find({masp : masp});
+ 	res.render('template/xemthem_sp',{spm : spm})
+ }

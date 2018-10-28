@@ -20,12 +20,15 @@
 			        	<img src="../<%= sp.item.anhsp %>" alt="" width="100">
 			        </td>
 			        <td><%= sp.item.tensp %></td>
-			        <td style="width: 40px">
-			        	<input type="number" name="soluong" value="<%= sp.soluong %>" style="width: 90px"/>
-			        </td>
-			        <td style="width: 130px" ><%= sp.item.gia %></td>
-			        <td>update</td>
-			        <td>xoa</td>
+			        <form method="post" action="/cart/update_cart/<%= sp.item._id %>">
+				        <td style="width: 40px">
+				        	<input type="number" name="soluong" id="soluong" value="<%= sp.soluong %>" style="width: 90px"/>
+				        </td>
+				        <td style="width: 130px" ><%= sp.item.gia %></td>
+				        <td id="up"><input type="submit" value="update"/></td>
+				     </form>
+				        <td><a href="/cart/xoacart/<%= sp.item._id %>" onclick="return confirm('Bạn Có chắc muốn xóa?');">Xoa</a></td>
+			      
 			      </tr>
 		      <% }) %>
 		      <tr class="tongtien">
@@ -43,3 +46,14 @@
 			chua co gio hang
 	   <% } %>
 </div>
+<script>
+$(document).ready(() =>{
+	var sl;
+	$("#soluong").change(() =>{
+		var sl =$("#soluong").val();
+		
+	});
+
+
+});
+</script>

@@ -27,3 +27,18 @@ module.exports.xemgiohang = function(req, res){
 }
 	res.render('template/giohang',{sp : sp, tongtien : tongtien});
 }
+module.exports.xoacart = async (req, res) =>{
+	var id = req.params.idsp;
+
+	var giohang = new GioHang(req.session.cart);
+	giohang.delCart(id);
+	res.redirect('/cart/xemgiohang');
+}
+
+module.exports.update_cart = function(req, res){
+	var id = req.params.idsp;
+	var sl = req.body.soluong;
+	var giohang = new GioHang(req.session.cart);
+	giohang.updateCart(id,sl);
+	res.redirect('/cart/xemgiohang');
+}

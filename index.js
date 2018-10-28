@@ -30,11 +30,10 @@ app.use(function(req, res, next){
 	}else{
 		var giohang = new GioHang(req.session.cart);
 		var cart = giohang.getcart();
-		console.log(cart);
 		var soluong = cart.reduce(function(a, b){
 			return a + b.soluong;
 		},0);
-		console.log(soluong);
+		
 	}
 	res.locals.sl = soluong;
 	next();

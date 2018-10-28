@@ -29,7 +29,7 @@ function GioHang (oldCart){
 	}
 	this.updateCart = function(id, sl){
 		this.items[id].soluong =parseInt(sl);
-		this.items[id].tien = this.items[id].item.gia * this.items[id].soluong;
+		this.items[id].tongtien = this.items[id].item.gia * this.items[id].soluong;
 	}
 }
 	module.exports = GioHang;

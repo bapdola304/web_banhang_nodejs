@@ -5,6 +5,7 @@ var controller = require('../controllers/home.controller');
 router.get('/',controller.home);
 
 router.get('/chitietsp/:idsp',controller.chitietsp);
+router.get('/xemthem/:masp',controller.xemthem);
 
 
 
