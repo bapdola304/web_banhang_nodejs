@@ -37,14 +37,14 @@ module.exports.editSanPham = async (req, res) =>{
 		});
 		console.log(req.body.anhsp);
 	}else{
-			var anhsp = req.body.anhsp = req.file.path.split('/').slice(1).join('/');
+			var anhsp = req.file.destination.split('/').slice(1)+ '/' + req.file.originalname;
 			await sp.updateOne({_id : id},{
 				tensp : req.body.tensp,
 				gia : req.body.gia,
 				masp : req.body.masp,
 				anhsp : anhsp
 			});
-			console.log(req.body.anhsp);
+			console.log(anhsp);
 	}
 	res.redirect('/admin');
 }

@@ -1,0 +1,27 @@
+<div class="container" style="position:relative">
+	<div class="login1">
+		<h3>Đăng Ký	</h3>
+		 <form action="/user/postRegister" method="POST">
+		 	 <div class="form-group">
+		      <input type="text" class="form-control"  placeholder="Họ Tên" name="name">
+		    </div>
+
+		    <div class="form-group">
+		      <input type="text" class="form-control"  placeholder="Tài Khoản" name="username">
+		    </div>
+		    <div class="form-group">
+		      <input type="password" class="form-control" placeholder="Mật Khẩu" name="password">
+		    </div>
+		    <button type="submit" class="btn btn-primary">Đăng Ký</button>
+		  </form>
+			   <% if(errors){
+		    	errors.forEach((er) =>{  %>
+		    	<div class="alert alert-danger" style="margin-top: 10px" ><%= er %></div>
+		    <%
+		     	})
+		    	 } 
+		     %>
+		  <p>Đăng Nhập</p>
+	</div>
+
+</div>

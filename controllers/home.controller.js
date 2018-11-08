@@ -17,6 +17,16 @@ var sp = require('../models/admin.model');
  }
  module.exports.xemthem = async (req, res) =>{
  	var masp = req.params.masp;
- 	var spm = await sp.find({masp : masp});
- 	res.render('template/xemthem_sp',{spm : spm})
+ 	var sp1trang = 5;
+ 	var trang = parseInt(req.query.trang) || 1;
+ 	var start = (trang - 1)*sp1trang;
+ 	var end = sp1trang * trang;
+ 	var array_sp = await sp.find({masp : masp});
+
+ 	var spm = array_sp.slice(start,end);
+ 	console.log(spm);
+ 	var tongsp = array_sp.length;
+ 	var sotrang =Math.ceil(tongsp/sp1trang);
+ 	// console.log(sotrang);
+ 	res.render('template/xemthem_sp',{spm : spm, sotrang : sotrang, masp : masp})
  }

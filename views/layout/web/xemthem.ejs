@@ -45,11 +45,9 @@
 
 <div class="col-md-12">
     <ul class="pagination pagination-sm">
-      <li><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
+      <% for(var i = 1; i<= sotrang; i++) { %>
+      <li><a href="/xemthem/<%= masp%>?trang=<%= i %>"><%= i %></a></li>
+    <% } %>
   </ul>
 </div>
 

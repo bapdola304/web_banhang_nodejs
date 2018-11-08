@@ -6,6 +6,7 @@ var adminRouter = require('./routes/admin.route');
 
 var homeRouter = require('./routes/home.route');
 var cartRouter = require('./routes/cart.route');
+var userRouter = require('./routes/user.route');
 
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
@@ -35,12 +36,18 @@ app.use(function(req, res, next){
 		},0);
 		
 	}
+	if(req.session.user){
+		res.locals.user = req.session.user;
+	}else{
+		res.locals.user = "";
+	}
 	res.locals.sl = soluong;
 	next();
 });
 app.use('/admin', adminRouter);
 app.use('/cart', cartRouter);
 app.use('/',homeRouter);
+app.use('/user',userRouter);
 app.listen(port,function(){
 	//console.log('port : ' + port);
 });
