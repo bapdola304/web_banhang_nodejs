@@ -20,7 +20,17 @@
                             <div class="form-group "><label>Tên Sản Phẩm</label><input class="form-control" type="text" name="tensp" value="" /></div>
                             <div class="form-group "><label>Gía</label><input class="form-control" type="text" name="gia" value="" /></div>
                             <div class="form-group "><label>Mã SP</label><input class="form-control" type="text" name="masp" value="" /></div>
+                            <div class="form-group "><label>Loại SP: </label>
+                                <select name="loaisp" id="">
+                                    <% category.forEach( item => {
+
+                                     %>
+                                        <option value="<%= item.id_tl %>"><%= item.category %></option>
+                                    <% } ) %>
+                                </select>
+                            </div>
                             <div class="form-group "><label>Ảnh SP</label><input class="form-control-file" type="file" name="anhsp" /></div>
+
                         <button class="btn btn-primary ml-3">Thêm</button></form>
                     </div>
                 </div>
@@ -44,6 +54,7 @@
                                 <th>Tên Sản Phẩm</th>
                                 <th>Gía</th>
                                  <th>Mã SP</th>
+                                 <th>Loại SP</th>
                                 <th>Quản Lý</th>
                             </tr>
                         </thead>
@@ -56,6 +67,12 @@
                                 <td><%= sp.tensp %></td>
                                 <td><%= sp.gia %> VND</td>
                                  <td><%= sp.masp %></td>
+                                 <td><%= category.filter( item => item.id_tl === sp.loaisp )
+
+                                  %>
+                                
+                                      
+                                  </td>
                                 <td>
                                     <a href="#"> <i class="fas fa-edit" style="margin:0px 20px" data-toggle="modal" data-target="#myModal<%= sp._id %>" ></i> </a>
                                     <a href="/admin/xoaSanPham/<%= sp._id %>" onclick="return confirm('Bạn có chắc muốn xóa không?');" >

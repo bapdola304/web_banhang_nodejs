@@ -1,11 +1,15 @@
 
 var sp = require('../models/admin.model');
+var category = require('../models/category.model');
 
 
 
 module.exports.index = async function(req, res){
 	var SanPham = await sp.find().sort({ _id: 'desc' });
-	res.render('admin/masterlayout',{SanPham : SanPham});
+
+	var category1 = await category.find();
+
+	res.render('admin/masterlayout',{SanPham : SanPham, category : category1});
 }
 
 module.exports.addSanPham = function(req, res){
@@ -15,6 +19,7 @@ module.exports.addSanPham = function(req, res){
 	console.log(req.body.anhsp);
 	console.log(req.file.originalname);
 	var sanpham = new sp(req.body);
+	console.log(sanpham);
 	sanpham.save();
 
 	res.redirect('/admin');

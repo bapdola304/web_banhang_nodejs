@@ -16,5 +16,8 @@
     "start": "nodemon --inspect index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
 }

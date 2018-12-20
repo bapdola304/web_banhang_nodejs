@@ -1,5 +1,6 @@
  
 var sp = require('../models/admin.model');
+var category = require('../models/category.model');
 
  module.exports.home = async function(req, res){
  	var sanphammoi = await sp.find().where({ masp: 'SPM' });
@@ -7,7 +8,10 @@ var sp = require('../models/admin.model');
  	var sanphambc = await sp.find().where({ masp: 'SPBC' });
 
  	var sanphamsale = await sp.find().where({ masp: 'SPS' });
- 	res.render('template/index',{spm : sanphammoi,spbc : sanphambc, sps : sanphamsale});
+
+ 	var category1 = await category.find();
+ 	console.log(category1);
+ 	res.render('template/index',{spm : sanphammoi,spbc : sanphambc, sps : sanphamsale, category : category1});
  }
 
   module.exports.chitietsp = async function(req, res){

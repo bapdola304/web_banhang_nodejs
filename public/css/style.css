@@ -303,6 +303,10 @@ body{
   padding-top: 10px;
   border-top: 1px solid #e8e8e8;
 }
+.dropdown:hover .dropdown-menu{
+  display: block;
+  transition: 0.5s;
+}
 
 
 /*footer*/
